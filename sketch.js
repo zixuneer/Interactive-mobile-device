@@ -1,4 +1,5 @@
 
+
 function preload(){
   // put preload code here
 }
@@ -80,48 +81,48 @@ function robot(){
 
   rect(x1, y1-110, 290, 160, 0, 0, 50, 50);
 	//spring
-	line(x2-width/7, y1-480, x2+width/7, y1-480) ;
-	line(x3-width/7, y1-380, x3+width/7, y1-380);
-	line(x1-width/7, y1-280, x1+width/7, y1-280);
+	line(x2-width/7, y1-390, x2+width/7, y1-390) ;
+	line(x3-width/7, y1-320, x3+width/7, y1-320);
+	line(x1-width/7, y1-250, x1+width/7, y1-250);
   //shoulders
   stroke(241, 148, 138);
   noFill()
-  bezier(x2-width/7-75, y1-480, x2-width/7-75, y1-480,
+  bezier(x2-width/7-75, y1-390, x2-width/7-75, y1-390,
   x2-width/7-200, y1-580, x2-width/6-130, y2-850);
-  bezier(x2+width/7+75, y1-480, x2+width/7+75, y1-480,
+  bezier(x2+width/7+75, y1-390, x2+width/7+75, y1-390,
   x2+width/7+200, y1-580, x2+width/6+130, y2-850);
   fill(255);
   ellipse(x2-width/6-130, y2-850, 70, 70);
   ellipse(x2+width/6+130, y2-850, 70, 70);
-  rect(x2-width/7-75, y1-480, 70, 70, 40, 0, 0, 40);
-  rect(x2+width/7+75, y1-480, 70, 70, 0, 40, 40, 0);
+  rect(x2-width/7-75, y1-390, 70, 70, 40, 0, 0, 40);
+  rect(x2+width/7+75, y1-390, 70, 70, 0, 40, 40, 0);
   //eyes stroke
 	noFill();
 	strokeWeight(30);
 	stroke(250, 219, 216);
-  triangle(x2-width/19, y1-760, x2-width/18.5, y1-730, x2-width/18-40, y1-760);
-  triangle(x2+width/19, y1-760, x2+width/18.5, y1-730, x2+width/18+40, y1-760);
-  ellipse(x2-width/8, y1-700, 140, 120);
-  ellipse(x2+width/8, y1-700, 140, 120);
+  triangle(x2-width/19, y1-690, x2-width/18.5, y1-650, x2-width/18-40, y1-690);
+  triangle(x2+width/19, y1-690, x2+width/18.5, y1-650, x2+width/18+40, y1-690);
+  ellipse(x2-width/8, y1-630, 140, 120);
+  ellipse(x2+width/8, y1-630, 140, 120);
   //eyes
   noStroke();
   fill(256, 256, 256);
-  triangle(x2-width/19, y1-760, x2-width/18.5, y1-710, x2-width/18-80, y1-760);
-  triangle(x2+width/19, y1-760, x2+width/18.5, y1-710, x2+width/18+80, y1-760);
-  ellipse(x2-width/8, y1-700, 140, 120);
-  ellipse(x2+width/8, y1-700, 140, 120);
+  triangle(x2-width/19, y1-690, x2-width/18.5, y1-640, x2-width/18-80, y1-690);
+  triangle(x2+width/19, y1-690, x2+width/18.5, y1-640, x2+width/18+80, y1-690);
+  ellipse(x2-width/8, y1-630, 140, 120);
+  ellipse(x2+width/8, y1-630, 140, 120);
   //moving eyes
 	fill(30, 30, 30);
-	ellipse(x2-110, y1-690, 70);
-	ellipse(x2+110, y1-690, 70);
+	ellipse(x2-110, y1-620, 70);
+	ellipse(x2+110, y1-620, 70);
 	fill(256, 256, 256);
-	ellipse(x2-100, y1-695, 25);
-	ellipse(x2+100, y1-695, 25);
+	ellipse(x2-100, y1-625, 25);
+	ellipse(x2+100, y1-625, 25);
   //neck
   fill(250, 219, 216);
-	rect(x2, y1-560, 120, 60, 10);
+	rect(x2, y1-490, 120, 60, 10);
 	fill(245, 183, 177);
-	rect(x2, y1-620, 70, 120, 10);
+	rect(x2, y1-550, 70, 120, 10);
   pop();
 
 }
@@ -181,3 +182,4 @@ function fontbox(){
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
