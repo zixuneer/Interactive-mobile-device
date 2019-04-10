@@ -80,7 +80,7 @@ function buttonbox(){
   strokeWeight(5);
   rectMode(CENTER);
   fill(255, tra);
-  rect(0, -100, 720, 500, 20);
+  rect(0, -100, 670, 450, 20);
 }
 
 
