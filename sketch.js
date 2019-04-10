@@ -1,5 +1,4 @@
 
-
 function preload(){
   // put preload code here
 }
@@ -11,6 +10,8 @@ function setup() {
 
 function draw() {
  background(133, 193, 233);
+ translate(width/2, height);
+
  push();
  frameRate(10);
  var a = random(0,height);
@@ -52,6 +53,7 @@ function draw() {
  }
 
  mouseClicked();
+ console.log(mouseX, mouseY);
 
 }
 
@@ -63,7 +65,7 @@ function robot(){
 	stroke(0);
 	fill(204);
 
-  translate(width/2, height);
+  //translate(width/2, height);
 
 	rectMode(CENTER);
 	//wheel
@@ -88,12 +90,12 @@ function robot(){
   stroke(241, 148, 138);
   noFill()
   bezier(x2-width/7-75, y1-390, x2-width/7-75, y1-390,
-  x2-width/7-200, y1-580, x2-width/6-130, y2-850);
+  x2-width/7-200, y1-580, x2-width/6-130, y2-760);
   bezier(x2+width/7+75, y1-390, x2+width/7+75, y1-390,
-  x2+width/7+200, y1-580, x2+width/6+130, y2-850);
+  x2+width/7+200, y1-580, x2+width/6+130, y2-760);
   fill(255);
-  ellipse(x2-width/6-130, y2-850, 70, 70);
-  ellipse(x2+width/6+130, y2-850, 70, 70);
+  ellipse(x2-width/6-130, y2-760, 70, 70);
+  ellipse(x2+width/6+130, y2-760, 70, 70);
   rect(x2-width/7-75, y1-390, 70, 70, 40, 0, 0, 40);
   rect(x2+width/7+75, y1-390, 70, 70, 0, 40, 40, 0);
   //eyes stroke
@@ -130,35 +132,35 @@ function robot(){
 var tra = 0, tra2 = 0;
 var t1 = 'HAPPY BIRTHDAY';
 var t2 = 'To: 钰晶';
-var y3 = -480;
+//var y3 = 480;
 
 function fontbox(){
   push();
-  translate(width/2, height/2);
+  //translate(width/2, height);
   strokeWeight(8);
   rectMode(CENTER);
   stroke(random(100,231), 76, 60, tra);
   fill(37, 62, 204, tra);
-  rect(x2, y3, 720, 280, 50);
+  rect(x2, y2-900, 720, 280, 50);
 
   textAlign(CENTER);
   textSize(110);
   fill(random(200), random(200), random(200),tra);
   stroke(random(231), random(200), random(200), tra);
   textFont('VT323');
-  text(t1, x2, y3+30);
+  text(t1, x2, y2-865);
   textSize(45);
   fill(52, 152, 219, tra);
   noStroke();
   textFont('ZCOOL KuaiLe');
-  text(t2, x1, y3+910);
+  text(t2, x1, y1-90);
   pop();
 }
 
  var y4 = -100
  function button(){
    push();
-   translate(width/2, height);
+   //translate(width/2, height);
    strokeWeight(4);
    rectMode(CENTER);
    stroke(245, 183, 177, tra2);
@@ -174,7 +176,8 @@ function fontbox(){
  }
 
  function mouseClicked(){
-   if(mouseX>-125 && mouseX<125 && mouseY>height-150 && mouseY<height-100){
+
+   if(mouseX>width/2-125 && mouseX<width/2+125 && mouseY>height-150 && mouseY<height-50){
      window.location.href = "flower.html";
    }
  }
@@ -182,4 +185,3 @@ function fontbox(){
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-
