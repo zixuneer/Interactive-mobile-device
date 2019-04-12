@@ -91,16 +91,16 @@ function buttonbox(){
   strokeWeight(6);
   rectMode(CENTER);
   fill(250, 219, 216, tra2);
-  rect(-200, 265, 270, 110, 20);
-  rect(200, 265, 270, 110, 20);
+  rect(-200, 255, 270, 110, 20);
+  rect(200, 255, 270, 110, 20);
 
   //text
   textSize(80);
   textAlign(CENTER);
   textFont('VT323');
   strokeWeight(8);
-  text('YES', -200, 290);
-  text('YES', 200, 290);
+  text('YES', -200, 280);
+  text('YES', 200, 280);
 
   var t1="钰晶是世界上最";
   var t2="可爱的小朋友吗";
