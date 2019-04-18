@@ -25,8 +25,8 @@ function draw() {
   textAlign(CENTER);
   noStroke();
   textFont('ZCOOL KuaiLe');
-  var t1 = '那就摇一摇给她送礼物吧！';
-  text(t1,windowWidth/2,height/11);
+  var t1 = '那就摇一摇给她送糖果吧！';
+  text(t1,windowWidth/2,height/12);
 
   if(value>1){
    var newrains={
