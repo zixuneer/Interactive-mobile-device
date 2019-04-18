@@ -17,7 +17,7 @@ function setup() {
 
 function draw() {
   value += -1;
-  background(245-sca, 183-sca, 177-sca);
+  background(245+sca, 183+sca, 177+sca);
   image(img, width/2, height/5, img.width/3, img.height/3);
 
   fill('#305f72');
@@ -26,13 +26,13 @@ function draw() {
   noStroke();
   textFont('ZCOOL KuaiLe');
   var t1 = '那就摇一摇给她送礼物吧！';
-  text(t1,windowWidth/2,height/10);
+  text(t1,windowWidth/2,height/11);
 
   if(value>1){
    var newrains={
      x:random(180,850),
      y:random(200,230),
-     size:random(10,15),
+     size:random(20,35),
      alp:random(100,255)
    };
    rain.push(newrains);
@@ -51,7 +51,7 @@ function draw() {
 
 function rains(x,y,size,alp){
 
-    fill('#77628c');
+    fill(random(100,255), random(100,255), random(100,255));
     noStroke();
     ellipse(x,y,size);
 
@@ -59,7 +59,7 @@ function rains(x,y,size,alp){
 
 function deviceShaken() {
   value = value + 10;
-  sca = sca+0.5;
+  sca = sca+0.1;
   if (sca > 100) {
     sca = 100;
   }
